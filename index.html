@@ -1,0 +1,62 @@
+<script>
+    function hidedefault() {
+        document.getElementById("maincontent").style.display="none";
+        document.getElementById("maincontent").style.opacity="0%";
+    }
+    
+    function re() {
+    document.getElementById("maincontent").style.display="block";
+    var menubgm = new Audio("bgm/Nintendo Channel Menu Music (High Quality).mp3");
+    menubgm.play();
+    setTimeout(re2,100);
+    }
+    function re2() {
+        document.getElementById("maincontent").style.opacity="100%";
+    }
+    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Nintendo Channel</title>
+    <link rel="shortcut icon" href="NCH.png" type="image/x-icon">
+</head>
+<style>
+     *{
+        margin:0;
+        padding:0;
+        transition:.3s ease-in-out;
+     }
+     body {
+        background-color:black;
+
+     }
+     #maincontent {
+        background-color:white;
+        width:100%;
+        height:100%;
+        position:absolute;
+        opacity:0%;
+        top:0;
+        left:0;
+     }
+     button {
+        padding:7px;
+        border-radius:15px;
+        border:1px solid black;
+        background: rgb(252,249,252);
+background: linear-gradient(180deg, rgba(252,249,252,1) 51%, rgba(242,239,242,1) 82%, rgba(211,208,211,1) 100%);
+     }
+
+</style>
+<body onload="hidedefault();">
+<div id="showinit" onclick="re();" style="width:100%; height:100%; position:absolute; color:white; ">
+<h3 style=" text-align:center;" align="center">Click to start Nintendo Channel.</h3>
+</div>
+<div id="maincontent">
+<br>
+<button>Wii Menu</button>
+</div>
+</body>
+</html>
